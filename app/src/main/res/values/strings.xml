@@ -22,11 +22,12 @@
     <string name="flat_white">Bla-bla-flat with milk</string>
     <string name="cacao">Cacao with milk</string>
     <string name="chocolate">Hot chocolate</string>
-    <string name="maciato">Espresso with milk cream</string>
+    <string name="macchiato">Espresso with milk cream</string>
     <string name="romano">Espresso with lemon</string>
     <string name="kyiv_kava">Bla-bla-Kyiv</string>
     <string name="dopio">Bla-bla-dopio</string>
     <string name="juice">Warm juice with coffee</string>
-    <string name="maroccino">Bla-bla-maroccino</string>
+    <string name="marocchino">Bla-bla-maroccino</string>
     <string name="swetty">Coffee with condensed milk</string>
+
 </resources>

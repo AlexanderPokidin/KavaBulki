@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">КаваБулки</string>
+    <string name="favorites">Улюблені напої</string>
+    <string name="menu">Меню</string>
+    <string name="customer_name">Як вас звати?</string>
+    <string name="price">"Ціна "</string>
+    <string name="total_cost">"Вартість замовлення "</string>
+    <string name="create_order">Зробити замовлення</string>
+    <string name="add_favorites">Додати до улюблених напоїв</string>
+    <string name="espresso">Філіжанка міцної чорної кави, яка містить усі корисні речовини.</string>
+    <string name="americano">Американо – це еспресо з додаванням окропу. Стільки ж смачної кави, але більше води.</string>
+    <string name="raf">Кавовий напій на основі еспресо з густою піною та м\'яким ванільним смаком.</string>
+    <string name="latte">Ароматну каву додають у гаряче молоко та пишну молочну пінку.</string>
+    <string name="lav_latte">До смачної кави, з якої готують лавандовий лате, додаються засушені квітки лаванди.</string>
+    <string name="capuccino">Класичне еспресо, що подається з теплим молоком та густою молочною пінкою.</string>
+    <string name="flat_white">Напій з австралійським корінням та яскравим кавовим смаком: міцну каву покриває збите молоко.</string>
+    <string name="cacao">Молоко за допомогою пару та високого тиску збивають разом із натуральним какао-порошком.</string>
+    <string name="chocolate">Густий шоколадний напій на основі молока. Хоч ложкою їж.</string>
+    <string name="juice">Кава-джус – це цікаве поєднання ароматного еспресо та теплого соку. Таке варто скуштувати.</string>
+    <string name="uah">грн</string>
+</resources>

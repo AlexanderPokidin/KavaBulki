@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">КаваБулки</string>
+    <string name="favorites">Любимые напитки</string>
+    <string name="menu">Меню</string>
+    <string name="customer_name">Как вас зовут?</string>
+    <string name="price">"Цена "</string>
+    <string name="total_cost">"Стоимость заказа "</string>
+    <string name="create_order">Сделать заказ</string>
+    <string name="add_favorites">Добавить к любимым напиткам</string>
+    <string name="espresso">Чашечка крепкого черного кофе, который содержит все полезные вещества.</string>
+    <string name="americano">Американо - это эспрессо с добавлением кипятка. Столько же вкусного кофе, но больше воды.</string>
+    <string name="raf">Кофейный напиток на основе эспрессо с густой пенкой и мягким ванильным вкусом.</string>
+    <string name="latte">Ароматный кофе добавляют в горячее молоко и пышную молочную пенку.</string>
+    <string name="lav_latte">Во вкусный кофе, из которой готовят лавандовый латте, добавляют засушенные цветки лаванды.</string>
+    <string name="capuccino">Классическое эспрессо подается с теплым молоком и густой молочной пенкой.</string>
+    <string name="flat_white">Напиток с австралийскими корнями и ярким кофейным вкусом: крепкий кофе покрывает взбитое молоко.</string>
+    <string name="cacao">Молоко с помощью пара и высокого давления взбивают вместе с натуральным какао-порошком.</string>
+    <string name="chocolate">Густой шоколадный напиток на основе молока. Хоть ложкой ешь.</string>
+    <string name="juice">Кофе-джус - это интересное сочетание ароматного эспрессо и теплого сока. Такое стоит попробовать.</string>
+    <string name="uah">грн</string>
+</resources>

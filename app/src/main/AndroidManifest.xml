@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KavaActivity"></activity>
-        <activity android:name=".KavaListActivity"></activity>
+        <activity android:name=".KavaActivity" />
+        <activity android:name=".KavaListActivity" />
     </application>
 
 </manifest>

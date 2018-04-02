@@ -37,7 +37,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:text="@string/description" />
+                android:text="@string/description"
+                tools:ignore="NestedWeights" />
 
             <LinearLayout
                 android:id="@+id/price_layout"
@@ -91,6 +92,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
+                    android:textSize="24sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
                     tools:ignore="HardcodedText" />
 
                 <Button
@@ -159,8 +163,8 @@
 
     <Button
         android:id="@+id/order_button"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

@@ -90,7 +90,7 @@ public class KavaActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:a.pokidin@gmail.com"));
+        intent.setData(Uri.parse("mailto:kavabulki@gmail.com"));
         intent.putExtra(Intent.EXTRA_SUBJECT, createOrderSubject());
         intent.putExtra(Intent.EXTRA_TEXT, createOrderMessage());
         if (intent.resolveActivity(getPackageManager()) != null) {

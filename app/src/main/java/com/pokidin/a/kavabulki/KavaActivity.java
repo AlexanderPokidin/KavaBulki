@@ -21,8 +21,11 @@ import android.widget.Toast;
 public class KavaActivity extends AppCompatActivity {
     private static final String TAG = "KavaActivity";
     public static final String EXTRA_KAVANO = "kavaNo";
+    private static final String KEY_COUNT = "count";
+    private static final String KEY_COST = "cost";
 
     private int count = 1;
+    private int cost;
     private int priceNum;
     private String nameText;
     private int kavaNo;
@@ -31,27 +34,38 @@ public class KavaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kava);
+        Log.d(TAG, "setContentView was run " + count + " " + cost);
+
 
         kavaNo = (Integer) getIntent().getExtras().get(EXTRA_KAVANO);
 
         try {
             new ReadDatabaseTask().execute(kavaNo);
+            Log.d(TAG, "ReadDatabaseTask was run " + count + " " + cost);
         } catch (SQLiteException e) {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
         }
+
+        if (savedInstanceState != null) {
+            count = savedInstanceState.getInt(KEY_COUNT);
+            cost = savedInstanceState.getInt(KEY_COST);
+            Log.d(TAG, "savedInstanceState was run " + count + " " + cost);
+        }
+
+        displayCost(cost);
+        displayCount(count);
     }
 
     public void onFavoriteClicked(View view) {
         new FavoriteDrinksTask().execute(kavaNo);
     }
 
-    private int calculatePrice(int count) {
-        int cost = priceNum * count;
+    private void calculatePrice(int count) {
+        cost = priceNum * count;
         Log.i(TAG, "Price is done");
         Log.i(TAG, "Cost is: " + cost);
         displayCost(cost);
-        return cost;
     }
 
     public void increment(View view) {
@@ -111,9 +125,17 @@ public class KavaActivity extends AppCompatActivity {
         String orderMessage = nameText + "\n";
         orderMessage += "Price: " + priceNum + " UAH \n";
         orderMessage += "Count: " + count + "\n";
-        orderMessage += "Cost: " + calculatePrice(count) + " UAH";
+        orderMessage += "Cost: " + cost + " UAH";
         Log.i(TAG, "Order is: " + orderMessage);
         return orderMessage;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_COST, cost);
+        outState.putInt(KEY_COUNT, count);
+        Log.d(TAG, "savedInstanceState saved  " + count + " " + cost);
     }
 
     private class ReadDatabaseTask extends AsyncTask<Integer, Void, Cursor> {

@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
@@ -17,7 +16,6 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 public class KavaListActivity extends ListActivity {
-    private static final String TAG = "KavaListActivity";
     private SQLiteDatabase db;
     private Cursor cursor;
     private ListView listDrinks;
@@ -25,14 +23,12 @@ public class KavaListActivity extends ListActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "List started to create");
         listDrinks = getListView();
 
         try {
             new ReadDatabaseTask().execute();
             listDrinks.setBackgroundResource(R.color.backgroundColor);
         } catch (SQLiteException e) {
-            Log.i(TAG, "DB Exception");
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
         }
@@ -50,7 +46,6 @@ public class KavaListActivity extends ListActivity {
         Intent intent = new Intent(KavaListActivity.this, KavaActivity.class);
         intent.putExtra(KavaActivity.EXTRA_KAVANO, (int) id);
         startActivity(intent);
-        Log.i(TAG, "Intent started");
     }
 
     private class ReadDatabaseTask extends AsyncTask<Void, Void, CursorAdapter> {
@@ -73,7 +68,6 @@ public class KavaListActivity extends ListActivity {
         @Override
         protected void onPostExecute(CursorAdapter listAdapter) {
             listDrinks.setAdapter(listAdapter);
-            Log.i(TAG, "List created");
         }
     }
 }

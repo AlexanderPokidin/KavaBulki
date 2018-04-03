@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -19,12 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class KavaActivity extends AppCompatActivity {
-    private static final String TAG = "KavaActivity";
     public static final String EXTRA_KAVANO = "kavaNo";
     private static final String KEY_COUNT = "count";
     private static final String KEY_COST = "cost";
 
-    private int count = 1;
+    private int count = 0;
     private int cost;
     private int priceNum;
     private String nameText;
@@ -34,14 +32,11 @@ public class KavaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kava);
-        Log.d(TAG, "setContentView was run " + count + " " + cost);
-
 
         kavaNo = (Integer) getIntent().getExtras().get(EXTRA_KAVANO);
 
         try {
             new ReadDatabaseTask().execute(kavaNo);
-            Log.d(TAG, "ReadDatabaseTask was run " + count + " " + cost);
         } catch (SQLiteException e) {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
@@ -50,7 +45,6 @@ public class KavaActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             count = savedInstanceState.getInt(KEY_COUNT);
             cost = savedInstanceState.getInt(KEY_COST);
-            Log.d(TAG, "savedInstanceState was run " + count + " " + cost);
         }
 
         displayCost(cost);
@@ -63,8 +57,6 @@ public class KavaActivity extends AppCompatActivity {
 
     private void calculatePrice(int count) {
         cost = priceNum * count;
-        Log.i(TAG, "Price is done");
-        Log.i(TAG, "Cost is: " + cost);
         displayCost(cost);
     }
 
@@ -117,7 +109,6 @@ public class KavaActivity extends AppCompatActivity {
         String customer_Name = editName.getText().toString();
         String orderSubject = nameText;
         orderSubject += ", for " + customer_Name;
-        Log.i(TAG, "Name is: " + customer_Name);
         return orderSubject;
     }
 
@@ -126,7 +117,6 @@ public class KavaActivity extends AppCompatActivity {
         orderMessage += "Price: " + priceNum + " UAH \n";
         orderMessage += "Count: " + count + "\n";
         orderMessage += "Cost: " + cost + " UAH";
-        Log.i(TAG, "Order is: " + orderMessage);
         return orderMessage;
     }
 
@@ -135,7 +125,6 @@ public class KavaActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putInt(KEY_COST, cost);
         outState.putInt(KEY_COUNT, count);
-        Log.d(TAG, "savedInstanceState saved  " + count + " " + cost);
     }
 
     private class ReadDatabaseTask extends AsyncTask<Integer, Void, Cursor> {

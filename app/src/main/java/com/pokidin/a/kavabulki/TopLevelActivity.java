@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -18,7 +17,6 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 public class TopLevelActivity extends AppCompatActivity {
-    private static final String TAG = "TopLevelActivity";
 
     private SQLiteDatabase db;
     private Cursor favoritesCursor;
@@ -35,7 +33,6 @@ public class TopLevelActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(TopLevelActivity.this, KavaListActivity.class);
                 startActivity(intent);
-                Log.i(TAG, "Intent started");
             }
         });
 

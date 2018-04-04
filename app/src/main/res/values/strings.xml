@@ -13,15 +13,15 @@
     <string name="add_favorites">Add to favorites</string>
     <string name="uah">UAH</string>
 
-    <string name="espresso">Small coffee drink</string>
-    <string name="americano">Middle coffee drink</string>
-    <string name="raf">Coffee drink with cream</string>
-    <string name="latte">Long coffee drink with milk</string>
-    <string name="lav_latte">Long coffee drink with milk and lavender flowers</string>
-    <string name="capuccino">Coffee drink with milk and cream</string>
-    <string name="flat_white">Australian coffee with milk</string>
-    <string name="cacao">Cacao with milk</string>
-    <string name="chocolate">Hot chocolate</string>
-    <string name="juice">Warm juice with coffee</string>
+    <string name="espresso">A popular short coffee drink. Expresso is the basis for the coffee menu</string>
+    <string name="americano">Americano is an espresso with boiling water. The same amount of delicious coffee, but more water</string>
+    <string name="raf">Raf coffee base on espresso with steamed milk foam and mild vanilla flavor</string>
+    <string name="latte">Espresso is mixed with steamed milk and topped with foam</string>
+    <string name="lav_latte">Classic latte with the dried flowers of lavender and lavender syrup</string>
+    <string name="capuccino">A cappuccino is an Italian coffee drink. Traditionally it made with espresso and steamed milk foam</string>
+    <string name="flat_white">Drink from Australia with bright coffee taste: steamed milk covers the strong coffee</string>
+    <string name="cacao">Cacao is milk steamed with natural cacao powder</string>
+    <string name="chocolate">A thick chocolate drink based on milk</string>
+    <string name="juice">Coffee-juice is an interesting mix of flavored espresso and warm juice</string>
 
 </resources>

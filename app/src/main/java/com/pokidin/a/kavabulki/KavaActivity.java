@@ -63,7 +63,7 @@ public class KavaActivity extends AppCompatActivity {
     public void increment(View view) {
         if (count > 4) {
             Toast maxToast = Toast.makeText(getApplicationContext(),
-                    "There is nothing more", Toast.LENGTH_SHORT);
+                    "No more", Toast.LENGTH_SHORT);
             maxToast.show();
             return;
         }
@@ -75,7 +75,7 @@ public class KavaActivity extends AppCompatActivity {
     public void decrement(View view) {
         if (count < 2) {
             Toast minToast = Toast.makeText(getApplicationContext(),
-                    "There is nothing less", Toast.LENGTH_SHORT);
+                    "No less", Toast.LENGTH_SHORT);
             minToast.show();
             return;
         }

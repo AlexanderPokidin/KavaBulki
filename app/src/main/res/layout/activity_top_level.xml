@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/backgroundColor"
+    android:orientation="vertical"
     tools:context=".TopLevelActivity">
 
     <ImageView
@@ -26,6 +26,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/favorites"
+        android:textColor="@color/colorText"
         android:textSize="24sp" />
 
     <ListView
@@ -35,17 +36,21 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/button_menu"
+        android:elevation="5dp"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/menu" />
+        android:background="@drawable/corners"
+        android:text="@string/menu"
+        android:textColor="@color/colorTextLight"
+        tools:ignore="UnusedAttribute" />
 
 </LinearLayout>

@@ -16,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/item_name"
+        android:textColor="@color/colorText"
         android:textSize="24sp" />
 
     <LinearLayout
@@ -83,18 +84,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/corners"
+                    android:elevation="5dp"
                     android:onClick="decrement"
                     android:text="-"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="24sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/item_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
                     android:text=""
                     android:textSize="24sp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
                     tools:ignore="HardcodedText" />
 
                 <Button
@@ -102,8 +109,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/corners"
+                    android:elevation="5dp"
                     android:onClick="increment"
                     android:text="+"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="24sp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
@@ -169,8 +180,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/corners"
+        android:elevation="5dp"
         android:onClick="submitOrder"
-        android:text="@string/create_order" />
+        android:text="@string/create_order"
+        android:textColor="@color/colorTextLight" />
 
     <CheckBox
         android:id="@+id/favorite"

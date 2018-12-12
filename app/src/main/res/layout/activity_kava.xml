@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/item_name"
         android:textColor="@color/colorText"
         android:textSize="24sp" />
@@ -34,9 +34,9 @@
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:text="@string/description"
                 tools:ignore="NestedWeights" />
@@ -45,8 +45,8 @@
                 android:id="@+id/price_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -75,8 +75,8 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -90,16 +90,17 @@
                     android:text="-"
                     android:textColor="@color/colorTextLight"
                     android:textSize="24sp"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="lollipop" />
 
                 <TextView
                     android:id="@+id/item_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
                     android:layout_marginStart="4dp"
-                    android:paddingEnd="8dp"
+                    android:layout_marginEnd="4dp"
                     android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
                     android:text=""
                     android:textSize="24sp"
                     tools:ignore="HardcodedText" />
@@ -115,7 +116,8 @@
                     android:text="+"
                     android:textColor="@color/colorTextLight"
                     android:textSize="24sp"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="lollipop" />
             </LinearLayout>
 
         </LinearLayout>
@@ -124,11 +126,12 @@
             android:id="@+id/item_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
@@ -136,9 +139,9 @@
         android:id="@+id/customer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:hint="@string/customer_name"
         android:inputType="text" />
 
@@ -177,23 +180,24 @@
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/corners"
         android:elevation="5dp"
         android:onClick="submitOrder"
         android:text="@string/create_order"
-        android:textColor="@color/colorTextLight" />
+        android:textColor="@color/colorTextLight"
+        tools:targetApi="lollipop" />
 
     <CheckBox
         android:id="@+id/favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:onClick="onFavoriteClicked"
         android:text="@string/add_favorites" />
 

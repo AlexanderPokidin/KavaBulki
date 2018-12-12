@@ -27,7 +27,7 @@ public class TopLevelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_level);
 
-        Button button = (Button) findViewById(R.id.button_menu);
+        Button button = findViewById(R.id.button_menu);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +36,7 @@ public class TopLevelActivity extends AppCompatActivity {
             }
         });
 
-        listFavorites = (ListView) findViewById(R.id.list_favorites);
+        listFavorites = findViewById(R.id.list_favorites);
         try {
             new FavoriteListTask().execute();
         } catch (SQLiteException e) {
@@ -96,7 +96,7 @@ public class TopLevelActivity extends AppCompatActivity {
                     new String[]{"_id", "NAME"},
                     "FAVORITE = 1",
                     null, null, null, null);
-            ListView listFavorites = (ListView) findViewById(R.id.list_favorites);
+            ListView listFavorites = findViewById(R.id.list_favorites);
             CursorAdapter adapter = (CursorAdapter) listFavorites.getAdapter();
             adapter.changeCursor(newCursor);
         } catch (SQLiteException e) {

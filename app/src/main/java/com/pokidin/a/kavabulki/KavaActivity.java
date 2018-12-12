@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class KavaActivity extends AppCompatActivity {
     public static final String EXTRA_KAVANO = "kavaNo";
     private static final String KEY_COUNT = "count";
@@ -33,7 +35,7 @@ public class KavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kava);
 
-        kavaNo = (Integer) getIntent().getExtras().get(EXTRA_KAVANO);
+        kavaNo = (int) Objects.requireNonNull(getIntent().getExtras()).get(EXTRA_KAVANO);
 
         try {
             new ReadDatabaseTask().execute(kavaNo);

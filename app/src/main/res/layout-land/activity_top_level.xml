@@ -23,7 +23,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/kava_logo" />
+            android:src="@drawable/kava_logo"
+            tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/button_menu"

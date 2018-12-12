@@ -9,7 +9,7 @@ public class KavaDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "kavabulki";
     private static final int DB_VERSION = 1;
 
-    public KavaDatabaseHelper(Context context) {
+    KavaDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
